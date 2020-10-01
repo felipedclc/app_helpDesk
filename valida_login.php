@@ -18,6 +18,7 @@ foreach($usuarios_app as $user) {
 if($usuario_autenticado) {
     print 'Usuario autenticado';
     $_SESSION['autenticado'] = 'SIM';
+    header('Location: home.php'); // desviando a aplicação para home.php
 }
 else {
     $_SESSION['autenticado'] = 'NAO';
