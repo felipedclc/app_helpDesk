@@ -44,13 +44,17 @@
                   if(isset($_GET['login']) && $_GET['login'] == 'erro') { // isset - verifica se o item está setado
                 ?>
 
-                   <div class="text-danger">
-                      Usuario ou senha inválido(s)
-                   </div> 
+                  <div class="text-danger">Usuario ou senha inválido(s)</div> 
+
+                <?php }; ?>
 
                 <?php
-                  };
+                  if(isset($_GET['login']) && $_GET['login'] == 'erro2') { // isset - verifica se o item está setado
                 ?>
+
+                  <div class="text-danger">Faça login antes de acessar as páginas protegidas</div> 
+
+                <?php }; ?>
 
                 <button class="btn btn-lg btn-info btn-block" type="submit">Entrar</button>
               </form>
