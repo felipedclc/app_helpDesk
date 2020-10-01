@@ -1,12 +1,4 @@
-<?php
-
-session_start();
-
-if(!isset($_SESSION['autenticado']) || $_SESSION['autenticado'] != 'SIM') {
-  header('Location: index.php?login=erro2'); // desviando a aplicação para login=erro
-}
-
-?>
+<?php require_once "validator_access.php" ?>
 
 
 <html>
