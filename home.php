@@ -1,5 +1,4 @@
-<?php
-require_once "validator_access.php"; // gera um fatal error caso não seja validado ?> 
+<?php require_once "validator_access.php"; // gera um fatal error caso não seja validado ?> 
 
 <html>
   <head>

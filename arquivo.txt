@@ -1,4 +1,0 @@
-1#Chamado 1#Impressora#Impressora está com defeito e não imprime.
-1#Titulo 2#Hardware#O meu pc está lento e com virus.
-1#Titulo 3#Software#Preciso de atualizar o meu Windows.
-4#Maria teste#Rede#A minha internet vivo não presta.

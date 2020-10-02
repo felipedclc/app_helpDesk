@@ -1,16 +1,16 @@
 <?php require_once "validator_access.php"; ?>
 
 <?php
-$chamados = array();
+  $chamados = array();
 
-$arquivo = fopen('arquivo.txt', 'r'); // r - abre somente para leitura
+  $arquivo = fopen('../../app_help_desk/arquivo.txt', 'r'); // r - abre somente para leitura
 
-while(!feof($arquivo)) { // percorre enquanto houverem linhas - feof(retorna true apenas no final)
-  $registro = fgets($arquivo); // recuperando o registro do arquivo
-  $chamados[] = $registro;
-}
+  while(!feof($arquivo)) { // percorre enquanto houverem linhas - feof(retorna true apenas no final)
+    $registro = fgets($arquivo); // recuperando o registro do arquivo
+    $chamados[] = $registro;
+  }
 
-fclose($arquivo);
+  fclose($arquivo);
 ?>
 
 <html>

@@ -11,7 +11,7 @@
     // $texto_array = [$_POST['titulo'], $_POST['categoria'], $_POST['descricao']];
     // $texto_string = implode("//", $texto_array);
     
-    $arquivo = fopen('arquivo.txt', 'a'); // (a)- abre ou cria um novo arquivo 
+    $arquivo = fopen('../../app_help_desk/arquivo.txt', 'a'); // (a)- abre ou cria um novo arquivo 
 
     fwrite($arquivo, $texto); // acrescenta o $texto_string no final do $arquivo 
 
