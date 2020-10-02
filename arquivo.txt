@@ -1,4 +1,4 @@
-Erro de impressão#Impressora#Erro ao tentar imprimir os arquivos. 
-Notebook não liga#Hardware#Ao ligar o notebook fica travado com uma tela azul.
-Telefone não funciona#Rede#O telefone está mudo. 
-Internet lenta#Rede#Internet da vivo fica travando a todo momento.
+1#Chamado 1#Impressora#Impressora está com defeito e não imprime.
+1#Titulo 2#Hardware#O meu pc está lento e com virus.
+1#Titulo 3#Software#Preciso de atualizar o meu Windows.
+4#Maria teste#Rede#A minha internet vivo não presta.

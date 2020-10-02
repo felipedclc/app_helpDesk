@@ -1,13 +1,12 @@
 <?php
 
-    echo '<pre>';
-    print_r($_POST);
+   session_start();
 
     $titulo = str_replace('#', '-', $_POST['titulo']);
     $categoria = str_replace('#', '-', $_POST['categoria']);
     $descricao = str_replace('#', '-', $_POST['descricao']);
 
-    $texto = $_POST['titulo']. '#'. $_POST['categoria']. '#'. $_POST['descricao'] . PHP_EOL; // PHP_EOL (passa o proximo aruivo para linha de baixo)
+    $texto = $_SESSION['id'] .'#' . $titulo. '#'. $categoria. '#'. $descricao . PHP_EOL; // PHP_EOL (passa o proximo aruivo para linha de baixo)
 
     // $texto_array = [$_POST['titulo'], $_POST['categoria'], $_POST['descricao']];
     // $texto_string = implode("//", $texto_array);

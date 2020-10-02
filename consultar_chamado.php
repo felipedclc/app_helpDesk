@@ -1,7 +1,6 @@
-<?php require_once "validator_access.php" ?>
+<?php require_once "validator_access.php"; ?>
 
 <?php
-
 $chamados = array();
 
 $arquivo = fopen('arquivo.txt', 'r'); // r - abre somente para leitura
@@ -12,7 +11,6 @@ while(!feof($arquivo)) { // percorre enquanto houverem linhas - feof(retorna tru
 }
 
 fclose($arquivo);
-
 ?>
 
 <html>
@@ -59,7 +57,13 @@ fclose($arquivo);
 
                 <?php 
                   $chamado_dados = explode('#', $chamado); // transforma a string em array, separando pelo '#'
-                  
+
+                  if($_SESSION['perfil_id'] == 2) {
+                    if($_SESSION['id'] != $chamado_dados[0]) { // se o id(session) for diferente o id[0] do array 
+                      continue; // desconsidera e passa para o próximo
+                    }
+                  }
+
                   if(count($chamado_dados) < 3) { // se o array tiver menos de 3 campos (titulo,subtitulo e conteudo)
                     continue;
                   }
@@ -67,9 +71,9 @@ fclose($arquivo);
               
                 <div class="card mb-3 bg-light">
                   <div class="card-body">
-                    <h5 class="card-title"><?= $chamado_dados[0]; ?></h5>
-                    <h6 class="card-subtitle mb-2 text-muted"><?= $chamado_dados[1]; ?></h6>
-                    <p class="card-text"><?= $chamado_dados[2]; ?></p>  
+                    <h5 class="card-title"><?= $chamado_dados[1]; ?></h5>
+                    <h6 class="card-subtitle mb-2 text-muted"><?= $chamado_dados[2]; ?></h6>
+                    <p class="card-text"><?= $chamado_dados[3]; ?></p>  
                   </div>
                 </div>
 
