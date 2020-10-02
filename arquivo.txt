@@ -1,3 +1,4 @@
 Erro de impressão#Impressora#Erro ao tentar imprimir os arquivos. 
 Notebook não liga#Hardware#Ao ligar o notebook fica travado com uma tela azul.
 Telefone não funciona#Rede#O telefone está mudo. 
+Internet lenta#Rede#Internet da vivo fica travando a todo momento.

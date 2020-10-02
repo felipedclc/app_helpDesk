@@ -1,5 +1,19 @@
 <?php require_once "validator_access.php" ?>
 
+<?php
+
+$chamados = array();
+
+$arquivo = fopen('arquivo.txt', 'r'); // r - abre somente para leitura
+
+while(!feof($arquivo)) { // percorre enquanto houverem linhas - feof(retorna true apenas no final)
+  $registro = fgets($arquivo); // recuperando o registro do arquivo
+  $chamados[] = $registro;
+}
+
+fclose($arquivo);
+
+?>
 
 <html>
   <head>
@@ -41,24 +55,25 @@
             </div>
             
             <div class="card-body">
+              <?php foreach($chamados as $chamado) { ?>
+
+                <?php 
+                  $chamado_dados = explode('#', $chamado); // transforma a string em array, separando pelo '#'
+                  
+                  if(count($chamado_dados) < 3) { // se o array tiver menos de 3 campos (titulo,subtitulo e conteudo)
+                    continue;
+                  }
+                ?>
               
-              <div class="card mb-3 bg-light">
-                <div class="card-body">
-                  <h5 class="card-title">Título do chamado...</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Categoria</h6>
-                  <p class="card-text">Descrição do chamado...</p>
-
+                <div class="card mb-3 bg-light">
+                  <div class="card-body">
+                    <h5 class="card-title"><?= $chamado_dados[0]; ?></h5>
+                    <h6 class="card-subtitle mb-2 text-muted"><?= $chamado_dados[1]; ?></h6>
+                    <p class="card-text"><?= $chamado_dados[2]; ?></p>  
+                  </div>
                 </div>
-              </div>
 
-              <div class="card mb-3 bg-light">
-                <div class="card-body">
-                  <h5 class="card-title">Título do chamado...</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Categoria</h6>
-                  <p class="card-text">Descrição do chamado...</p>
-
-                </div>
-              </div>
+              <?php } ?>
 
               <div class="row mt-5">
                 <div class="col-6">
@@ -66,6 +81,7 @@
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>
